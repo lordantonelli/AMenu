@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/br.usp.icmc.amenu/src-gen" editDirectory="/br.usp.icmc.amenu.edit/src"
+    editorDirectory="/br.usp.icmc.amenu.editor/src" modelPluginID="br.usp.icmc.amenu"
+    forceOverwrite="true" modelName="AMenu" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="br.usp.icmc.amenu.edit"
+    editorPluginID="br.usp.icmc.amenu.editor" runtimeVersion="2.10">
+  <genPackages prefix="AMenu" basePackage="br.usp.icmc.amenu" disposableProviderFactory="true"
+      fileExtensions="menu" ecorePackage="AMenu.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="AMenu.ecore#//Visibility">
+      <genEnumLiterals ecoreEnumLiteral="AMenu.ecore#//Visibility/true"/>
+      <genEnumLiterals ecoreEnumLiteral="AMenu.ecore#//Visibility/false"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="AMenu.ecore#//Position">
+      <genEnumLiterals ecoreEnumLiteral="AMenu.ecore#//Position/left"/>
+      <genEnumLiterals ecoreEnumLiteral="AMenu.ecore#//Position/right"/>
+    </genEnums>
+    <genClasses ecoreClass="AMenu.ecore#//Menu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AMenu.ecore#//Menu/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AMenu.ecore#//Menu/visibility"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AMenu.ecore#//Menu/items"/>
+    </genClasses>
+    <genClasses ecoreClass="AMenu.ecore#//Item">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AMenu.ecore#//Item/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AMenu.ecore#//Item/action"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AMenu.ecore#//Item/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AMenu.ecore#//Item/title"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AMenu.ecore#//Item/icon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AMenu.ecore#//Item/menu"/>
+    </genClasses>
+    <genClasses ecoreClass="AMenu.ecore#//Icon">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AMenu.ecore#//Icon/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AMenu.ecore#//Icon/position"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AMenu.ecore#//Icon/text_alt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AMenu.ecore#//Icon/address"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AMenu.ecore#//Icon/features"/>
+    </genClasses>
+    <genClasses ecoreClass="AMenu.ecore#//Feature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AMenu.ecore#//Feature/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AMenu.ecore#//Feature/type"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

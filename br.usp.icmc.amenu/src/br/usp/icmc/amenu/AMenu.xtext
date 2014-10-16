@@ -1,0 +1,50 @@
+grammar br.usp.icmc.amenu.AMenu with org.eclipse.xtext.common.Terminals
+
+generate aMenu "http://www.usp.br/icmc/amenu/AMenu"
+
+Menu:
+	'{'
+		(
+			( 'id:' name=ID ';' )?
+			& ( 'visibility: 'visibility=Visibility ';' )?
+			& ( 'items: [' ((items+=Item) (',' items+=Item)*) ']' )
+		)
+	'}'
+;
+
+Item:
+	'{'
+		(
+			  ( 'id:' name=ID ';' )?
+			& ( 'action:' action=STRING ';' )
+			& ( 'label:' label=STRING ';' )
+			& ( 'title:' title=STRING ';' )?
+			& ( 'icon:' icon=Icon )?
+			& ( 'submenu:' menu=Menu )?	
+		)
+	'}'
+;
+
+Icon:
+	'{'
+		(
+			  ( 'id:' name=ID ';' )?
+			& ( 'position: ' position=Position ';')?
+			& ( 'text-alt:' text_alt=STRING ';' )
+			& ( 'address:' address=STRING ';' )
+			& ( features += Feature )*
+		)
+	'}'
+;
+
+Feature:
+  name = ID ':' type = ID ';'
+;
+
+enum Visibility:
+	true |
+	false;
+	
+enum Position:
+	left |
+	right;
