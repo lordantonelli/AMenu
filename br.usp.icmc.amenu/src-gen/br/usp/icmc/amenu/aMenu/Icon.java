@@ -2,8 +2,6 @@
  */
 package br.usp.icmc.amenu.aMenu;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,9 +14,9 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link br.usp.icmc.amenu.aMenu.Icon#getName <em>Name</em>}</li>
  *   <li>{@link br.usp.icmc.amenu.aMenu.Icon#getPosition <em>Position</em>}</li>
+ *   <li>{@link br.usp.icmc.amenu.aMenu.Icon#getDecorator <em>Decorator</em>}</li>
  *   <li>{@link br.usp.icmc.amenu.aMenu.Icon#getText_alt <em>Text alt</em>}</li>
  *   <li>{@link br.usp.icmc.amenu.aMenu.Icon#getAddress <em>Address</em>}</li>
- *   <li>{@link br.usp.icmc.amenu.aMenu.Icon#getFeatures <em>Features</em>}</li>
  * </ul>
  * </p>
  *
@@ -84,6 +82,32 @@ public interface Icon extends EObject
   void setPosition(Position value);
 
   /**
+   * Returns the value of the '<em><b>Decorator</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Decorator</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Decorator</em>' attribute.
+   * @see #setDecorator(String)
+   * @see br.usp.icmc.amenu.aMenu.AMenuPackage#getIcon_Decorator()
+   * @model
+   * @generated
+   */
+  String getDecorator();
+
+  /**
+   * Sets the value of the '{@link br.usp.icmc.amenu.aMenu.Icon#getDecorator <em>Decorator</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Decorator</em>' attribute.
+   * @see #getDecorator()
+   * @generated
+   */
+  void setDecorator(String value);
+
+  /**
    * Returns the value of the '<em><b>Text alt</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
@@ -134,21 +158,5 @@ public interface Icon extends EObject
    * @generated
    */
   void setAddress(String value);
-
-  /**
-   * Returns the value of the '<em><b>Features</b></em>' containment reference list.
-   * The list contents are of type {@link br.usp.icmc.amenu.aMenu.Feature}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Features</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Features</em>' containment reference list.
-   * @see br.usp.icmc.amenu.aMenu.AMenuPackage#getIcon_Features()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Feature> getFeatures();
 
 } // Icon

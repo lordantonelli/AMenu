@@ -80,19 +80,29 @@ public class AMenuAdapterFactory extends AdapterFactoryImpl
         return createMenuAdapter();
       }
       @Override
+      public Adapter caseConfigurations(Configurations object)
+      {
+        return createConfigurationsAdapter();
+      }
+      @Override
+      public Adapter caseConfig(Config object)
+      {
+        return createConfigAdapter();
+      }
+      @Override
       public Adapter caseItem(Item object)
       {
         return createItemAdapter();
       }
       @Override
+      public Adapter caseSubMenu(SubMenu object)
+      {
+        return createSubMenuAdapter();
+      }
+      @Override
       public Adapter caseIcon(Icon object)
       {
         return createIconAdapter();
-      }
-      @Override
-      public Adapter caseFeature(Feature object)
-      {
-        return createFeatureAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -132,6 +142,36 @@ public class AMenuAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link br.usp.icmc.amenu.aMenu.Configurations <em>Configurations</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see br.usp.icmc.amenu.aMenu.Configurations
+   * @generated
+   */
+  public Adapter createConfigurationsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link br.usp.icmc.amenu.aMenu.Config <em>Config</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see br.usp.icmc.amenu.aMenu.Config
+   * @generated
+   */
+  public Adapter createConfigAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link br.usp.icmc.amenu.aMenu.Item <em>Item</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -147,6 +187,21 @@ public class AMenuAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link br.usp.icmc.amenu.aMenu.SubMenu <em>Sub Menu</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see br.usp.icmc.amenu.aMenu.SubMenu
+   * @generated
+   */
+  public Adapter createSubMenuAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link br.usp.icmc.amenu.aMenu.Icon <em>Icon</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -157,21 +212,6 @@ public class AMenuAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createIconAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link br.usp.icmc.amenu.aMenu.Feature <em>Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see br.usp.icmc.amenu.aMenu.Feature
-   * @generated
-   */
-  public Adapter createFeatureAdapter()
   {
     return null;
   }

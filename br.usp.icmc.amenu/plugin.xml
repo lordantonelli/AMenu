@@ -13,4 +13,10 @@
 
 
 
+
+<extension  point="org.eclipse.emf.ecp.view.model.provider.xmi.file">
+<file filePath="model/generated/Menu.view"/>
+
+<file filePath="model/generated/Menu.view"/>
+</extension>
 </plugin>

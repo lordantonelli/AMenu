@@ -79,6 +79,20 @@ public class AMenuSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case AMenuPackage.CONFIGURATIONS:
+      {
+        Configurations configurations = (Configurations)theEObject;
+        T result = caseConfigurations(configurations);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AMenuPackage.CONFIG:
+      {
+        Config config = (Config)theEObject;
+        T result = caseConfig(config);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case AMenuPackage.ITEM:
       {
         Item item = (Item)theEObject;
@@ -86,17 +100,17 @@ public class AMenuSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case AMenuPackage.SUB_MENU:
+      {
+        SubMenu subMenu = (SubMenu)theEObject;
+        T result = caseSubMenu(subMenu);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case AMenuPackage.ICON:
       {
         Icon icon = (Icon)theEObject;
         T result = caseIcon(icon);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case AMenuPackage.FEATURE:
-      {
-        Feature feature = (Feature)theEObject;
-        T result = caseFeature(feature);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -121,6 +135,38 @@ public class AMenuSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Configurations</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Configurations</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseConfigurations(Configurations object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Config</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Config</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseConfig(Config object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Item</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -137,6 +183,22 @@ public class AMenuSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Sub Menu</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Sub Menu</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSubMenu(SubMenu object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Icon</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -148,22 +210,6 @@ public class AMenuSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseIcon(Icon object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Feature</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Feature</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseFeature(Feature object)
   {
     return null;
   }

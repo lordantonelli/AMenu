@@ -3,25 +3,15 @@
 package br.usp.icmc.amenu.aMenu.impl;
 
 import br.usp.icmc.amenu.aMenu.AMenuPackage;
-import br.usp.icmc.amenu.aMenu.Feature;
 import br.usp.icmc.amenu.aMenu.Icon;
 import br.usp.icmc.amenu.aMenu.Position;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,9 +22,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link br.usp.icmc.amenu.aMenu.impl.IconImpl#getName <em>Name</em>}</li>
  *   <li>{@link br.usp.icmc.amenu.aMenu.impl.IconImpl#getPosition <em>Position</em>}</li>
+ *   <li>{@link br.usp.icmc.amenu.aMenu.impl.IconImpl#getDecorator <em>Decorator</em>}</li>
  *   <li>{@link br.usp.icmc.amenu.aMenu.impl.IconImpl#getText_alt <em>Text alt</em>}</li>
  *   <li>{@link br.usp.icmc.amenu.aMenu.impl.IconImpl#getAddress <em>Address</em>}</li>
- *   <li>{@link br.usp.icmc.amenu.aMenu.impl.IconImpl#getFeatures <em>Features</em>}</li>
  * </ul>
  * </p>
  *
@@ -70,7 +60,7 @@ public class IconImpl extends MinimalEObjectImpl.Container implements Icon
    * @generated
    * @ordered
    */
-  protected static final Position POSITION_EDEFAULT = Position.LEFT;
+  protected static final Position POSITION_EDEFAULT = Position.CENTER;
 
   /**
    * The cached value of the '{@link #getPosition() <em>Position</em>}' attribute.
@@ -81,6 +71,26 @@ public class IconImpl extends MinimalEObjectImpl.Container implements Icon
    * @ordered
    */
   protected Position position = POSITION_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getDecorator() <em>Decorator</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDecorator()
+   * @generated
+   * @ordered
+   */
+  protected static final String DECORATOR_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getDecorator() <em>Decorator</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDecorator()
+   * @generated
+   * @ordered
+   */
+  protected String decorator = DECORATOR_EDEFAULT;
 
   /**
    * The default value of the '{@link #getText_alt() <em>Text alt</em>}' attribute.
@@ -121,16 +131,6 @@ public class IconImpl extends MinimalEObjectImpl.Container implements Icon
    * @ordered
    */
   protected String address = ADDRESS_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getFeatures() <em>Features</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getFeatures()
-   * @generated
-   * @ordered
-   */
-  protected EList<Feature> features;
 
   /**
    * <!-- begin-user-doc -->
@@ -204,6 +204,29 @@ public class IconImpl extends MinimalEObjectImpl.Container implements Icon
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getDecorator()
+  {
+    return decorator;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setDecorator(String newDecorator)
+  {
+    String oldDecorator = decorator;
+    decorator = newDecorator;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AMenuPackage.ICON__DECORATOR, oldDecorator, decorator));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getText_alt()
   {
     return text_alt;
@@ -250,36 +273,6 @@ public class IconImpl extends MinimalEObjectImpl.Container implements Icon
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Feature> getFeatures()
-  {
-    if (features == null)
-    {
-      features = new EObjectContainmentEList<Feature>(Feature.class, this, AMenuPackage.ICON__FEATURES);
-    }
-    return features;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case AMenuPackage.ICON__FEATURES:
-        return ((InternalEList<?>)getFeatures()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -289,12 +282,12 @@ public class IconImpl extends MinimalEObjectImpl.Container implements Icon
         return getName();
       case AMenuPackage.ICON__POSITION:
         return getPosition();
+      case AMenuPackage.ICON__DECORATOR:
+        return getDecorator();
       case AMenuPackage.ICON__TEXT_ALT:
         return getText_alt();
       case AMenuPackage.ICON__ADDRESS:
         return getAddress();
-      case AMenuPackage.ICON__FEATURES:
-        return getFeatures();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -304,7 +297,6 @@ public class IconImpl extends MinimalEObjectImpl.Container implements Icon
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -316,15 +308,14 @@ public class IconImpl extends MinimalEObjectImpl.Container implements Icon
       case AMenuPackage.ICON__POSITION:
         setPosition((Position)newValue);
         return;
+      case AMenuPackage.ICON__DECORATOR:
+        setDecorator((String)newValue);
+        return;
       case AMenuPackage.ICON__TEXT_ALT:
         setText_alt((String)newValue);
         return;
       case AMenuPackage.ICON__ADDRESS:
         setAddress((String)newValue);
-        return;
-      case AMenuPackage.ICON__FEATURES:
-        getFeatures().clear();
-        getFeatures().addAll((Collection<? extends Feature>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -346,14 +337,14 @@ public class IconImpl extends MinimalEObjectImpl.Container implements Icon
       case AMenuPackage.ICON__POSITION:
         setPosition(POSITION_EDEFAULT);
         return;
+      case AMenuPackage.ICON__DECORATOR:
+        setDecorator(DECORATOR_EDEFAULT);
+        return;
       case AMenuPackage.ICON__TEXT_ALT:
         setText_alt(TEXT_ALT_EDEFAULT);
         return;
       case AMenuPackage.ICON__ADDRESS:
         setAddress(ADDRESS_EDEFAULT);
-        return;
-      case AMenuPackage.ICON__FEATURES:
-        getFeatures().clear();
         return;
     }
     super.eUnset(featureID);
@@ -373,12 +364,12 @@ public class IconImpl extends MinimalEObjectImpl.Container implements Icon
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case AMenuPackage.ICON__POSITION:
         return position != POSITION_EDEFAULT;
+      case AMenuPackage.ICON__DECORATOR:
+        return DECORATOR_EDEFAULT == null ? decorator != null : !DECORATOR_EDEFAULT.equals(decorator);
       case AMenuPackage.ICON__TEXT_ALT:
         return TEXT_ALT_EDEFAULT == null ? text_alt != null : !TEXT_ALT_EDEFAULT.equals(text_alt);
       case AMenuPackage.ICON__ADDRESS:
         return ADDRESS_EDEFAULT == null ? address != null : !ADDRESS_EDEFAULT.equals(address);
-      case AMenuPackage.ICON__FEATURES:
-        return features != null && !features.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -398,6 +389,8 @@ public class IconImpl extends MinimalEObjectImpl.Container implements Icon
     result.append(name);
     result.append(", position: ");
     result.append(position);
+    result.append(", decorator: ");
+    result.append(decorator);
     result.append(", text_alt: ");
     result.append(text_alt);
     result.append(", address: ");

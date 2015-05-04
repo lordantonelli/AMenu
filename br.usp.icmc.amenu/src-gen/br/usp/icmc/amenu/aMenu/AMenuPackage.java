@@ -77,13 +77,49 @@ public interface AMenuPackage extends EPackage
   int MENU__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Visibility</b></em>' attribute.
+   * The feature id for the '<em><b>Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MENU__VISIBILITY = 1;
+  int MENU__TYPE = 1;
+
+  /**
+   * The feature id for the '<em><b>Style</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MENU__STYLE = 2;
+
+  /**
+   * The feature id for the '<em><b>Position</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MENU__POSITION = 3;
+
+  /**
+   * The feature id for the '<em><b>Decorator</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MENU__DECORATOR = 4;
+
+  /**
+   * The feature id for the '<em><b>Configuration</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MENU__CONFIGURATION = 5;
 
   /**
    * The feature id for the '<em><b>Items</b></em>' containment reference list.
@@ -92,7 +128,7 @@ public interface AMenuPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MENU__ITEMS = 2;
+  int MENU__ITEMS = 6;
 
   /**
    * The number of structural features of the '<em>Menu</em>' class.
@@ -101,7 +137,81 @@ public interface AMenuPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MENU_FEATURE_COUNT = 3;
+  int MENU_FEATURE_COUNT = 7;
+
+  /**
+   * The meta object id for the '{@link br.usp.icmc.amenu.aMenu.impl.ConfigurationsImpl <em>Configurations</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see br.usp.icmc.amenu.aMenu.impl.ConfigurationsImpl
+   * @see br.usp.icmc.amenu.aMenu.impl.AMenuPackageImpl#getConfigurations()
+   * @generated
+   */
+  int CONFIGURATIONS = 1;
+
+  /**
+   * The feature id for the '<em><b>Config top</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONFIGURATIONS__CONFIG_TOP = 0;
+
+  /**
+   * The feature id for the '<em><b>Config children</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONFIGURATIONS__CONFIG_CHILDREN = 1;
+
+  /**
+   * The number of structural features of the '<em>Configurations</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONFIGURATIONS_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link br.usp.icmc.amenu.aMenu.impl.ConfigImpl <em>Config</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see br.usp.icmc.amenu.aMenu.impl.ConfigImpl
+   * @see br.usp.icmc.amenu.aMenu.impl.AMenuPackageImpl#getConfig()
+   * @generated
+   */
+  int CONFIG = 2;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONFIG__FEATURE = 0;
+
+  /**
+   * The feature id for the '<em><b>Color</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONFIG__COLOR = 1;
+
+  /**
+   * The number of structural features of the '<em>Config</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONFIG_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link br.usp.icmc.amenu.aMenu.impl.ItemImpl <em>Item</em>}' class.
@@ -111,7 +221,7 @@ public interface AMenuPackage extends EPackage
    * @see br.usp.icmc.amenu.aMenu.impl.AMenuPackageImpl#getItem()
    * @generated
    */
-  int ITEM = 1;
+  int ITEM = 3;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -123,13 +233,22 @@ public interface AMenuPackage extends EPackage
   int ITEM__NAME = 0;
 
   /**
+   * The feature id for the '<em><b>Decorator</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ITEM__DECORATOR = 1;
+
+  /**
    * The feature id for the '<em><b>Action</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ITEM__ACTION = 1;
+  int ITEM__ACTION = 2;
 
   /**
    * The feature id for the '<em><b>Label</b></em>' attribute.
@@ -138,7 +257,7 @@ public interface AMenuPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ITEM__LABEL = 2;
+  int ITEM__LABEL = 3;
 
   /**
    * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -147,7 +266,25 @@ public interface AMenuPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ITEM__TITLE = 3;
+  int ITEM__TITLE = 4;
+
+  /**
+   * The feature id for the '<em><b>Direction</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ITEM__DIRECTION = 5;
+
+  /**
+   * The feature id for the '<em><b>Target</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ITEM__TARGET = 6;
 
   /**
    * The feature id for the '<em><b>Icon</b></em>' containment reference.
@@ -156,16 +293,16 @@ public interface AMenuPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ITEM__ICON = 4;
+  int ITEM__ICON = 7;
 
   /**
-   * The feature id for the '<em><b>Menu</b></em>' containment reference.
+   * The feature id for the '<em><b>Submenu</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ITEM__MENU = 5;
+  int ITEM__SUBMENU = 8;
 
   /**
    * The number of structural features of the '<em>Item</em>' class.
@@ -174,7 +311,44 @@ public interface AMenuPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ITEM_FEATURE_COUNT = 6;
+  int ITEM_FEATURE_COUNT = 9;
+
+  /**
+   * The meta object id for the '{@link br.usp.icmc.amenu.aMenu.impl.SubMenuImpl <em>Sub Menu</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see br.usp.icmc.amenu.aMenu.impl.SubMenuImpl
+   * @see br.usp.icmc.amenu.aMenu.impl.AMenuPackageImpl#getSubMenu()
+   * @generated
+   */
+  int SUB_MENU = 4;
+
+  /**
+   * The feature id for the '<em><b>Decorator</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUB_MENU__DECORATOR = 0;
+
+  /**
+   * The feature id for the '<em><b>Items</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUB_MENU__ITEMS = 1;
+
+  /**
+   * The number of structural features of the '<em>Sub Menu</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUB_MENU_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link br.usp.icmc.amenu.aMenu.impl.IconImpl <em>Icon</em>}' class.
@@ -184,7 +358,7 @@ public interface AMenuPackage extends EPackage
    * @see br.usp.icmc.amenu.aMenu.impl.AMenuPackageImpl#getIcon()
    * @generated
    */
-  int ICON = 2;
+  int ICON = 5;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -205,13 +379,22 @@ public interface AMenuPackage extends EPackage
   int ICON__POSITION = 1;
 
   /**
+   * The feature id for the '<em><b>Decorator</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ICON__DECORATOR = 2;
+
+  /**
    * The feature id for the '<em><b>Text alt</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ICON__TEXT_ALT = 2;
+  int ICON__TEXT_ALT = 3;
 
   /**
    * The feature id for the '<em><b>Address</b></em>' attribute.
@@ -220,16 +403,7 @@ public interface AMenuPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ICON__ADDRESS = 3;
-
-  /**
-   * The feature id for the '<em><b>Features</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ICON__FEATURES = 4;
+  int ICON__ADDRESS = 4;
 
   /**
    * The number of structural features of the '<em>Icon</em>' class.
@@ -241,51 +415,24 @@ public interface AMenuPackage extends EPackage
   int ICON_FEATURE_COUNT = 5;
 
   /**
-   * The meta object id for the '{@link br.usp.icmc.amenu.aMenu.impl.FeatureImpl <em>Feature</em>}' class.
+   * The meta object id for the '{@link br.usp.icmc.amenu.aMenu.Type <em>Type</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see br.usp.icmc.amenu.aMenu.impl.FeatureImpl
-   * @see br.usp.icmc.amenu.aMenu.impl.AMenuPackageImpl#getFeature()
+   * @see br.usp.icmc.amenu.aMenu.Type
+   * @see br.usp.icmc.amenu.aMenu.impl.AMenuPackageImpl#getType()
    * @generated
    */
-  int FEATURE = 3;
+  int TYPE = 6;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * The meta object id for the '{@link br.usp.icmc.amenu.aMenu.Style <em>Style</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FEATURE__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FEATURE__TYPE = 1;
-
-  /**
-   * The number of structural features of the '<em>Feature</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FEATURE_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link br.usp.icmc.amenu.aMenu.Visibility <em>Visibility</em>}' enum.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see br.usp.icmc.amenu.aMenu.Visibility
-   * @see br.usp.icmc.amenu.aMenu.impl.AMenuPackageImpl#getVisibility()
+   * @see br.usp.icmc.amenu.aMenu.Style
+   * @see br.usp.icmc.amenu.aMenu.impl.AMenuPackageImpl#getStyle()
    * @generated
    */
-  int VISIBILITY = 4;
+  int STYLE = 7;
 
   /**
    * The meta object id for the '{@link br.usp.icmc.amenu.aMenu.Position <em>Position</em>}' enum.
@@ -295,7 +442,27 @@ public interface AMenuPackage extends EPackage
    * @see br.usp.icmc.amenu.aMenu.impl.AMenuPackageImpl#getPosition()
    * @generated
    */
-  int POSITION = 5;
+  int POSITION = 8;
+
+  /**
+   * The meta object id for the '{@link br.usp.icmc.amenu.aMenu.Direction <em>Direction</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see br.usp.icmc.amenu.aMenu.Direction
+   * @see br.usp.icmc.amenu.aMenu.impl.AMenuPackageImpl#getDirection()
+   * @generated
+   */
+  int DIRECTION = 9;
+
+  /**
+   * The meta object id for the '{@link br.usp.icmc.amenu.aMenu.Target <em>Target</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see br.usp.icmc.amenu.aMenu.Target
+   * @see br.usp.icmc.amenu.aMenu.impl.AMenuPackageImpl#getTarget()
+   * @generated
+   */
+  int TARGET = 10;
 
 
   /**
@@ -320,15 +487,59 @@ public interface AMenuPackage extends EPackage
   EAttribute getMenu_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link br.usp.icmc.amenu.aMenu.Menu#getVisibility <em>Visibility</em>}'.
+   * Returns the meta object for the attribute '{@link br.usp.icmc.amenu.aMenu.Menu#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Visibility</em>'.
-   * @see br.usp.icmc.amenu.aMenu.Menu#getVisibility()
+   * @return the meta object for the attribute '<em>Type</em>'.
+   * @see br.usp.icmc.amenu.aMenu.Menu#getType()
    * @see #getMenu()
    * @generated
    */
-  EAttribute getMenu_Visibility();
+  EAttribute getMenu_Type();
+
+  /**
+   * Returns the meta object for the attribute '{@link br.usp.icmc.amenu.aMenu.Menu#getStyle <em>Style</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Style</em>'.
+   * @see br.usp.icmc.amenu.aMenu.Menu#getStyle()
+   * @see #getMenu()
+   * @generated
+   */
+  EAttribute getMenu_Style();
+
+  /**
+   * Returns the meta object for the attribute '{@link br.usp.icmc.amenu.aMenu.Menu#getPosition <em>Position</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Position</em>'.
+   * @see br.usp.icmc.amenu.aMenu.Menu#getPosition()
+   * @see #getMenu()
+   * @generated
+   */
+  EAttribute getMenu_Position();
+
+  /**
+   * Returns the meta object for the attribute '{@link br.usp.icmc.amenu.aMenu.Menu#getDecorator <em>Decorator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Decorator</em>'.
+   * @see br.usp.icmc.amenu.aMenu.Menu#getDecorator()
+   * @see #getMenu()
+   * @generated
+   */
+  EAttribute getMenu_Decorator();
+
+  /**
+   * Returns the meta object for the containment reference '{@link br.usp.icmc.amenu.aMenu.Menu#getConfiguration <em>Configuration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Configuration</em>'.
+   * @see br.usp.icmc.amenu.aMenu.Menu#getConfiguration()
+   * @see #getMenu()
+   * @generated
+   */
+  EReference getMenu_Configuration();
 
   /**
    * Returns the meta object for the containment reference list '{@link br.usp.icmc.amenu.aMenu.Menu#getItems <em>Items</em>}'.
@@ -340,6 +551,70 @@ public interface AMenuPackage extends EPackage
    * @generated
    */
   EReference getMenu_Items();
+
+  /**
+   * Returns the meta object for class '{@link br.usp.icmc.amenu.aMenu.Configurations <em>Configurations</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Configurations</em>'.
+   * @see br.usp.icmc.amenu.aMenu.Configurations
+   * @generated
+   */
+  EClass getConfigurations();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link br.usp.icmc.amenu.aMenu.Configurations#getConfig_top <em>Config top</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Config top</em>'.
+   * @see br.usp.icmc.amenu.aMenu.Configurations#getConfig_top()
+   * @see #getConfigurations()
+   * @generated
+   */
+  EReference getConfigurations_Config_top();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link br.usp.icmc.amenu.aMenu.Configurations#getConfig_children <em>Config children</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Config children</em>'.
+   * @see br.usp.icmc.amenu.aMenu.Configurations#getConfig_children()
+   * @see #getConfigurations()
+   * @generated
+   */
+  EReference getConfigurations_Config_children();
+
+  /**
+   * Returns the meta object for class '{@link br.usp.icmc.amenu.aMenu.Config <em>Config</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Config</em>'.
+   * @see br.usp.icmc.amenu.aMenu.Config
+   * @generated
+   */
+  EClass getConfig();
+
+  /**
+   * Returns the meta object for the attribute '{@link br.usp.icmc.amenu.aMenu.Config#getFeature <em>Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Feature</em>'.
+   * @see br.usp.icmc.amenu.aMenu.Config#getFeature()
+   * @see #getConfig()
+   * @generated
+   */
+  EAttribute getConfig_Feature();
+
+  /**
+   * Returns the meta object for the attribute '{@link br.usp.icmc.amenu.aMenu.Config#getColor <em>Color</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Color</em>'.
+   * @see br.usp.icmc.amenu.aMenu.Config#getColor()
+   * @see #getConfig()
+   * @generated
+   */
+  EAttribute getConfig_Color();
 
   /**
    * Returns the meta object for class '{@link br.usp.icmc.amenu.aMenu.Item <em>Item</em>}'.
@@ -361,6 +636,17 @@ public interface AMenuPackage extends EPackage
    * @generated
    */
   EAttribute getItem_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link br.usp.icmc.amenu.aMenu.Item#getDecorator <em>Decorator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Decorator</em>'.
+   * @see br.usp.icmc.amenu.aMenu.Item#getDecorator()
+   * @see #getItem()
+   * @generated
+   */
+  EAttribute getItem_Decorator();
 
   /**
    * Returns the meta object for the attribute '{@link br.usp.icmc.amenu.aMenu.Item#getAction <em>Action</em>}'.
@@ -396,6 +682,28 @@ public interface AMenuPackage extends EPackage
   EAttribute getItem_Title();
 
   /**
+   * Returns the meta object for the attribute '{@link br.usp.icmc.amenu.aMenu.Item#getDirection <em>Direction</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Direction</em>'.
+   * @see br.usp.icmc.amenu.aMenu.Item#getDirection()
+   * @see #getItem()
+   * @generated
+   */
+  EAttribute getItem_Direction();
+
+  /**
+   * Returns the meta object for the attribute '{@link br.usp.icmc.amenu.aMenu.Item#getTarget <em>Target</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Target</em>'.
+   * @see br.usp.icmc.amenu.aMenu.Item#getTarget()
+   * @see #getItem()
+   * @generated
+   */
+  EAttribute getItem_Target();
+
+  /**
    * Returns the meta object for the containment reference '{@link br.usp.icmc.amenu.aMenu.Item#getIcon <em>Icon</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -407,15 +715,47 @@ public interface AMenuPackage extends EPackage
   EReference getItem_Icon();
 
   /**
-   * Returns the meta object for the containment reference '{@link br.usp.icmc.amenu.aMenu.Item#getMenu <em>Menu</em>}'.
+   * Returns the meta object for the containment reference '{@link br.usp.icmc.amenu.aMenu.Item#getSubmenu <em>Submenu</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Menu</em>'.
-   * @see br.usp.icmc.amenu.aMenu.Item#getMenu()
+   * @return the meta object for the containment reference '<em>Submenu</em>'.
+   * @see br.usp.icmc.amenu.aMenu.Item#getSubmenu()
    * @see #getItem()
    * @generated
    */
-  EReference getItem_Menu();
+  EReference getItem_Submenu();
+
+  /**
+   * Returns the meta object for class '{@link br.usp.icmc.amenu.aMenu.SubMenu <em>Sub Menu</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Sub Menu</em>'.
+   * @see br.usp.icmc.amenu.aMenu.SubMenu
+   * @generated
+   */
+  EClass getSubMenu();
+
+  /**
+   * Returns the meta object for the attribute '{@link br.usp.icmc.amenu.aMenu.SubMenu#getDecorator <em>Decorator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Decorator</em>'.
+   * @see br.usp.icmc.amenu.aMenu.SubMenu#getDecorator()
+   * @see #getSubMenu()
+   * @generated
+   */
+  EAttribute getSubMenu_Decorator();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link br.usp.icmc.amenu.aMenu.SubMenu#getItems <em>Items</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Items</em>'.
+   * @see br.usp.icmc.amenu.aMenu.SubMenu#getItems()
+   * @see #getSubMenu()
+   * @generated
+   */
+  EReference getSubMenu_Items();
 
   /**
    * Returns the meta object for class '{@link br.usp.icmc.amenu.aMenu.Icon <em>Icon</em>}'.
@@ -450,6 +790,17 @@ public interface AMenuPackage extends EPackage
   EAttribute getIcon_Position();
 
   /**
+   * Returns the meta object for the attribute '{@link br.usp.icmc.amenu.aMenu.Icon#getDecorator <em>Decorator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Decorator</em>'.
+   * @see br.usp.icmc.amenu.aMenu.Icon#getDecorator()
+   * @see #getIcon()
+   * @generated
+   */
+  EAttribute getIcon_Decorator();
+
+  /**
    * Returns the meta object for the attribute '{@link br.usp.icmc.amenu.aMenu.Icon#getText_alt <em>Text alt</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -472,57 +823,24 @@ public interface AMenuPackage extends EPackage
   EAttribute getIcon_Address();
 
   /**
-   * Returns the meta object for the containment reference list '{@link br.usp.icmc.amenu.aMenu.Icon#getFeatures <em>Features</em>}'.
+   * Returns the meta object for enum '{@link br.usp.icmc.amenu.aMenu.Type <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Features</em>'.
-   * @see br.usp.icmc.amenu.aMenu.Icon#getFeatures()
-   * @see #getIcon()
+   * @return the meta object for enum '<em>Type</em>'.
+   * @see br.usp.icmc.amenu.aMenu.Type
    * @generated
    */
-  EReference getIcon_Features();
+  EEnum getType();
 
   /**
-   * Returns the meta object for class '{@link br.usp.icmc.amenu.aMenu.Feature <em>Feature</em>}'.
+   * Returns the meta object for enum '{@link br.usp.icmc.amenu.aMenu.Style <em>Style</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Feature</em>'.
-   * @see br.usp.icmc.amenu.aMenu.Feature
+   * @return the meta object for enum '<em>Style</em>'.
+   * @see br.usp.icmc.amenu.aMenu.Style
    * @generated
    */
-  EClass getFeature();
-
-  /**
-   * Returns the meta object for the attribute '{@link br.usp.icmc.amenu.aMenu.Feature#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see br.usp.icmc.amenu.aMenu.Feature#getName()
-   * @see #getFeature()
-   * @generated
-   */
-  EAttribute getFeature_Name();
-
-  /**
-   * Returns the meta object for the attribute '{@link br.usp.icmc.amenu.aMenu.Feature#getType <em>Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Type</em>'.
-   * @see br.usp.icmc.amenu.aMenu.Feature#getType()
-   * @see #getFeature()
-   * @generated
-   */
-  EAttribute getFeature_Type();
-
-  /**
-   * Returns the meta object for enum '{@link br.usp.icmc.amenu.aMenu.Visibility <em>Visibility</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Visibility</em>'.
-   * @see br.usp.icmc.amenu.aMenu.Visibility
-   * @generated
-   */
-  EEnum getVisibility();
+  EEnum getStyle();
 
   /**
    * Returns the meta object for enum '{@link br.usp.icmc.amenu.aMenu.Position <em>Position</em>}'.
@@ -533,6 +851,26 @@ public interface AMenuPackage extends EPackage
    * @generated
    */
   EEnum getPosition();
+
+  /**
+   * Returns the meta object for enum '{@link br.usp.icmc.amenu.aMenu.Direction <em>Direction</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Direction</em>'.
+   * @see br.usp.icmc.amenu.aMenu.Direction
+   * @generated
+   */
+  EEnum getDirection();
+
+  /**
+   * Returns the meta object for enum '{@link br.usp.icmc.amenu.aMenu.Target <em>Target</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Target</em>'.
+   * @see br.usp.icmc.amenu.aMenu.Target
+   * @generated
+   */
+  EEnum getTarget();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -576,12 +914,44 @@ public interface AMenuPackage extends EPackage
     EAttribute MENU__NAME = eINSTANCE.getMenu_Name();
 
     /**
-     * The meta object literal for the '<em><b>Visibility</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute MENU__VISIBILITY = eINSTANCE.getMenu_Visibility();
+    EAttribute MENU__TYPE = eINSTANCE.getMenu_Type();
+
+    /**
+     * The meta object literal for the '<em><b>Style</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MENU__STYLE = eINSTANCE.getMenu_Style();
+
+    /**
+     * The meta object literal for the '<em><b>Position</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MENU__POSITION = eINSTANCE.getMenu_Position();
+
+    /**
+     * The meta object literal for the '<em><b>Decorator</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MENU__DECORATOR = eINSTANCE.getMenu_Decorator();
+
+    /**
+     * The meta object literal for the '<em><b>Configuration</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MENU__CONFIGURATION = eINSTANCE.getMenu_Configuration();
 
     /**
      * The meta object literal for the '<em><b>Items</b></em>' containment reference list feature.
@@ -590,6 +960,58 @@ public interface AMenuPackage extends EPackage
      * @generated
      */
     EReference MENU__ITEMS = eINSTANCE.getMenu_Items();
+
+    /**
+     * The meta object literal for the '{@link br.usp.icmc.amenu.aMenu.impl.ConfigurationsImpl <em>Configurations</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see br.usp.icmc.amenu.aMenu.impl.ConfigurationsImpl
+     * @see br.usp.icmc.amenu.aMenu.impl.AMenuPackageImpl#getConfigurations()
+     * @generated
+     */
+    EClass CONFIGURATIONS = eINSTANCE.getConfigurations();
+
+    /**
+     * The meta object literal for the '<em><b>Config top</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONFIGURATIONS__CONFIG_TOP = eINSTANCE.getConfigurations_Config_top();
+
+    /**
+     * The meta object literal for the '<em><b>Config children</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONFIGURATIONS__CONFIG_CHILDREN = eINSTANCE.getConfigurations_Config_children();
+
+    /**
+     * The meta object literal for the '{@link br.usp.icmc.amenu.aMenu.impl.ConfigImpl <em>Config</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see br.usp.icmc.amenu.aMenu.impl.ConfigImpl
+     * @see br.usp.icmc.amenu.aMenu.impl.AMenuPackageImpl#getConfig()
+     * @generated
+     */
+    EClass CONFIG = eINSTANCE.getConfig();
+
+    /**
+     * The meta object literal for the '<em><b>Feature</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CONFIG__FEATURE = eINSTANCE.getConfig_Feature();
+
+    /**
+     * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CONFIG__COLOR = eINSTANCE.getConfig_Color();
 
     /**
      * The meta object literal for the '{@link br.usp.icmc.amenu.aMenu.impl.ItemImpl <em>Item</em>}' class.
@@ -608,6 +1030,14 @@ public interface AMenuPackage extends EPackage
      * @generated
      */
     EAttribute ITEM__NAME = eINSTANCE.getItem_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Decorator</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ITEM__DECORATOR = eINSTANCE.getItem_Decorator();
 
     /**
      * The meta object literal for the '<em><b>Action</b></em>' attribute feature.
@@ -634,6 +1064,22 @@ public interface AMenuPackage extends EPackage
     EAttribute ITEM__TITLE = eINSTANCE.getItem_Title();
 
     /**
+     * The meta object literal for the '<em><b>Direction</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ITEM__DIRECTION = eINSTANCE.getItem_Direction();
+
+    /**
+     * The meta object literal for the '<em><b>Target</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ITEM__TARGET = eINSTANCE.getItem_Target();
+
+    /**
      * The meta object literal for the '<em><b>Icon</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -642,12 +1088,38 @@ public interface AMenuPackage extends EPackage
     EReference ITEM__ICON = eINSTANCE.getItem_Icon();
 
     /**
-     * The meta object literal for the '<em><b>Menu</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Submenu</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ITEM__MENU = eINSTANCE.getItem_Menu();
+    EReference ITEM__SUBMENU = eINSTANCE.getItem_Submenu();
+
+    /**
+     * The meta object literal for the '{@link br.usp.icmc.amenu.aMenu.impl.SubMenuImpl <em>Sub Menu</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see br.usp.icmc.amenu.aMenu.impl.SubMenuImpl
+     * @see br.usp.icmc.amenu.aMenu.impl.AMenuPackageImpl#getSubMenu()
+     * @generated
+     */
+    EClass SUB_MENU = eINSTANCE.getSubMenu();
+
+    /**
+     * The meta object literal for the '<em><b>Decorator</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SUB_MENU__DECORATOR = eINSTANCE.getSubMenu_Decorator();
+
+    /**
+     * The meta object literal for the '<em><b>Items</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SUB_MENU__ITEMS = eINSTANCE.getSubMenu_Items();
 
     /**
      * The meta object literal for the '{@link br.usp.icmc.amenu.aMenu.impl.IconImpl <em>Icon</em>}' class.
@@ -676,6 +1148,14 @@ public interface AMenuPackage extends EPackage
     EAttribute ICON__POSITION = eINSTANCE.getIcon_Position();
 
     /**
+     * The meta object literal for the '<em><b>Decorator</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ICON__DECORATOR = eINSTANCE.getIcon_Decorator();
+
+    /**
      * The meta object literal for the '<em><b>Text alt</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -692,48 +1172,24 @@ public interface AMenuPackage extends EPackage
     EAttribute ICON__ADDRESS = eINSTANCE.getIcon_Address();
 
     /**
-     * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
+     * The meta object literal for the '{@link br.usp.icmc.amenu.aMenu.Type <em>Type</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see br.usp.icmc.amenu.aMenu.Type
+     * @see br.usp.icmc.amenu.aMenu.impl.AMenuPackageImpl#getType()
      * @generated
      */
-    EReference ICON__FEATURES = eINSTANCE.getIcon_Features();
+    EEnum TYPE = eINSTANCE.getType();
 
     /**
-     * The meta object literal for the '{@link br.usp.icmc.amenu.aMenu.impl.FeatureImpl <em>Feature</em>}' class.
+     * The meta object literal for the '{@link br.usp.icmc.amenu.aMenu.Style <em>Style</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see br.usp.icmc.amenu.aMenu.impl.FeatureImpl
-     * @see br.usp.icmc.amenu.aMenu.impl.AMenuPackageImpl#getFeature()
+     * @see br.usp.icmc.amenu.aMenu.Style
+     * @see br.usp.icmc.amenu.aMenu.impl.AMenuPackageImpl#getStyle()
      * @generated
      */
-    EClass FEATURE = eINSTANCE.getFeature();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute FEATURE__NAME = eINSTANCE.getFeature_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute FEATURE__TYPE = eINSTANCE.getFeature_Type();
-
-    /**
-     * The meta object literal for the '{@link br.usp.icmc.amenu.aMenu.Visibility <em>Visibility</em>}' enum.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see br.usp.icmc.amenu.aMenu.Visibility
-     * @see br.usp.icmc.amenu.aMenu.impl.AMenuPackageImpl#getVisibility()
-     * @generated
-     */
-    EEnum VISIBILITY = eINSTANCE.getVisibility();
+    EEnum STYLE = eINSTANCE.getStyle();
 
     /**
      * The meta object literal for the '{@link br.usp.icmc.amenu.aMenu.Position <em>Position</em>}' enum.
@@ -744,6 +1200,26 @@ public interface AMenuPackage extends EPackage
      * @generated
      */
     EEnum POSITION = eINSTANCE.getPosition();
+
+    /**
+     * The meta object literal for the '{@link br.usp.icmc.amenu.aMenu.Direction <em>Direction</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see br.usp.icmc.amenu.aMenu.Direction
+     * @see br.usp.icmc.amenu.aMenu.impl.AMenuPackageImpl#getDirection()
+     * @generated
+     */
+    EEnum DIRECTION = eINSTANCE.getDirection();
+
+    /**
+     * The meta object literal for the '{@link br.usp.icmc.amenu.aMenu.Target <em>Target</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see br.usp.icmc.amenu.aMenu.Target
+     * @see br.usp.icmc.amenu.aMenu.impl.AMenuPackageImpl#getTarget()
+     * @generated
+     */
+    EEnum TARGET = eINSTANCE.getTarget();
 
   }
 

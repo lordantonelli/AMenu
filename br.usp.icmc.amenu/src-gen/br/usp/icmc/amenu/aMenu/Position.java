@@ -20,6 +20,16 @@ import org.eclipse.emf.common.util.Enumerator;
 public enum Position implements Enumerator
 {
   /**
+   * The '<em><b>Center</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #CENTER_VALUE
+   * @generated
+   * @ordered
+   */
+  CENTER(0, "center", "center"),
+
+  /**
    * The '<em><b>Left</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -27,7 +37,7 @@ public enum Position implements Enumerator
    * @generated
    * @ordered
    */
-  LEFT(0, "left", "left"),
+  LEFT(1, "left", "left"),
 
   /**
    * The '<em><b>Right</b></em>' literal object.
@@ -37,7 +47,22 @@ public enum Position implements Enumerator
    * @generated
    * @ordered
    */
-  RIGHT(1, "right", "right");
+  RIGHT(2, "right", "right");
+
+  /**
+   * The '<em><b>Center</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Center</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #CENTER
+   * @model name="center"
+   * @generated
+   * @ordered
+   */
+  public static final int CENTER_VALUE = 0;
 
   /**
    * The '<em><b>Left</b></em>' literal value.
@@ -52,7 +77,7 @@ public enum Position implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int LEFT_VALUE = 0;
+  public static final int LEFT_VALUE = 1;
 
   /**
    * The '<em><b>Right</b></em>' literal value.
@@ -67,7 +92,7 @@ public enum Position implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int RIGHT_VALUE = 1;
+  public static final int RIGHT_VALUE = 2;
 
   /**
    * An array of all the '<em><b>Position</b></em>' enumerators.
@@ -78,6 +103,7 @@ public enum Position implements Enumerator
   private static final Position[] VALUES_ARRAY =
     new Position[]
     {
+      CENTER,
       LEFT,
       RIGHT,
     };
@@ -138,6 +164,7 @@ public enum Position implements Enumerator
   {
     switch (value)
     {
+      case CENTER_VALUE: return CENTER;
       case LEFT_VALUE: return LEFT;
       case RIGHT_VALUE: return RIGHT;
     }

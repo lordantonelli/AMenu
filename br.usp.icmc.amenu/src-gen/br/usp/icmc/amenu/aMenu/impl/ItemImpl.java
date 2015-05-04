@@ -3,9 +3,11 @@
 package br.usp.icmc.amenu.aMenu.impl;
 
 import br.usp.icmc.amenu.aMenu.AMenuPackage;
+import br.usp.icmc.amenu.aMenu.Direction;
 import br.usp.icmc.amenu.aMenu.Icon;
 import br.usp.icmc.amenu.aMenu.Item;
-import br.usp.icmc.amenu.aMenu.Menu;
+import br.usp.icmc.amenu.aMenu.SubMenu;
+import br.usp.icmc.amenu.aMenu.Target;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -24,11 +26,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link br.usp.icmc.amenu.aMenu.impl.ItemImpl#getName <em>Name</em>}</li>
+ *   <li>{@link br.usp.icmc.amenu.aMenu.impl.ItemImpl#getDecorator <em>Decorator</em>}</li>
  *   <li>{@link br.usp.icmc.amenu.aMenu.impl.ItemImpl#getAction <em>Action</em>}</li>
  *   <li>{@link br.usp.icmc.amenu.aMenu.impl.ItemImpl#getLabel <em>Label</em>}</li>
  *   <li>{@link br.usp.icmc.amenu.aMenu.impl.ItemImpl#getTitle <em>Title</em>}</li>
+ *   <li>{@link br.usp.icmc.amenu.aMenu.impl.ItemImpl#getDirection <em>Direction</em>}</li>
+ *   <li>{@link br.usp.icmc.amenu.aMenu.impl.ItemImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link br.usp.icmc.amenu.aMenu.impl.ItemImpl#getIcon <em>Icon</em>}</li>
- *   <li>{@link br.usp.icmc.amenu.aMenu.impl.ItemImpl#getMenu <em>Menu</em>}</li>
+ *   <li>{@link br.usp.icmc.amenu.aMenu.impl.ItemImpl#getSubmenu <em>Submenu</em>}</li>
  * </ul>
  * </p>
  *
@@ -55,6 +60,26 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getDecorator() <em>Decorator</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDecorator()
+   * @generated
+   * @ordered
+   */
+  protected static final String DECORATOR_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getDecorator() <em>Decorator</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDecorator()
+   * @generated
+   * @ordered
+   */
+  protected String decorator = DECORATOR_EDEFAULT;
 
   /**
    * The default value of the '{@link #getAction() <em>Action</em>}' attribute.
@@ -117,6 +142,46 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
   protected String title = TITLE_EDEFAULT;
 
   /**
+   * The default value of the '{@link #getDirection() <em>Direction</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDirection()
+   * @generated
+   * @ordered
+   */
+  protected static final Direction DIRECTION_EDEFAULT = Direction.LTR;
+
+  /**
+   * The cached value of the '{@link #getDirection() <em>Direction</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDirection()
+   * @generated
+   * @ordered
+   */
+  protected Direction direction = DIRECTION_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getTarget() <em>Target</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTarget()
+   * @generated
+   * @ordered
+   */
+  protected static final Target TARGET_EDEFAULT = Target._SELF;
+
+  /**
+   * The cached value of the '{@link #getTarget() <em>Target</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTarget()
+   * @generated
+   * @ordered
+   */
+  protected Target target = TARGET_EDEFAULT;
+
+  /**
    * The cached value of the '{@link #getIcon() <em>Icon</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -127,14 +192,14 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
   protected Icon icon;
 
   /**
-   * The cached value of the '{@link #getMenu() <em>Menu</em>}' containment reference.
+   * The cached value of the '{@link #getSubmenu() <em>Submenu</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getMenu()
+   * @see #getSubmenu()
    * @generated
    * @ordered
    */
-  protected Menu menu;
+  protected SubMenu submenu;
 
   /**
    * <!-- begin-user-doc -->
@@ -178,6 +243,29 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
     name = newName;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, AMenuPackage.ITEM__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getDecorator()
+  {
+    return decorator;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setDecorator(String newDecorator)
+  {
+    String oldDecorator = decorator;
+    decorator = newDecorator;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AMenuPackage.ITEM__DECORATOR, oldDecorator, decorator));
   }
 
   /**
@@ -254,6 +342,52 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
    * <!-- end-user-doc -->
    * @generated
    */
+  public Direction getDirection()
+  {
+    return direction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setDirection(Direction newDirection)
+  {
+    Direction oldDirection = direction;
+    direction = newDirection == null ? DIRECTION_EDEFAULT : newDirection;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AMenuPackage.ITEM__DIRECTION, oldDirection, direction));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Target getTarget()
+  {
+    return target;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setTarget(Target newTarget)
+  {
+    Target oldTarget = target;
+    target = newTarget == null ? TARGET_EDEFAULT : newTarget;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AMenuPackage.ITEM__TARGET, oldTarget, target));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Icon getIcon()
   {
     return icon;
@@ -302,9 +436,9 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
    * <!-- end-user-doc -->
    * @generated
    */
-  public Menu getMenu()
+  public SubMenu getSubmenu()
   {
-    return menu;
+    return submenu;
   }
 
   /**
@@ -312,13 +446,13 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetMenu(Menu newMenu, NotificationChain msgs)
+  public NotificationChain basicSetSubmenu(SubMenu newSubmenu, NotificationChain msgs)
   {
-    Menu oldMenu = menu;
-    menu = newMenu;
+    SubMenu oldSubmenu = submenu;
+    submenu = newSubmenu;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AMenuPackage.ITEM__MENU, oldMenu, newMenu);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AMenuPackage.ITEM__SUBMENU, oldSubmenu, newSubmenu);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -329,20 +463,20 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setMenu(Menu newMenu)
+  public void setSubmenu(SubMenu newSubmenu)
   {
-    if (newMenu != menu)
+    if (newSubmenu != submenu)
     {
       NotificationChain msgs = null;
-      if (menu != null)
-        msgs = ((InternalEObject)menu).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AMenuPackage.ITEM__MENU, null, msgs);
-      if (newMenu != null)
-        msgs = ((InternalEObject)newMenu).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AMenuPackage.ITEM__MENU, null, msgs);
-      msgs = basicSetMenu(newMenu, msgs);
+      if (submenu != null)
+        msgs = ((InternalEObject)submenu).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AMenuPackage.ITEM__SUBMENU, null, msgs);
+      if (newSubmenu != null)
+        msgs = ((InternalEObject)newSubmenu).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AMenuPackage.ITEM__SUBMENU, null, msgs);
+      msgs = basicSetSubmenu(newSubmenu, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, AMenuPackage.ITEM__MENU, newMenu, newMenu));
+      eNotify(new ENotificationImpl(this, Notification.SET, AMenuPackage.ITEM__SUBMENU, newSubmenu, newSubmenu));
   }
 
   /**
@@ -357,8 +491,8 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
     {
       case AMenuPackage.ITEM__ICON:
         return basicSetIcon(null, msgs);
-      case AMenuPackage.ITEM__MENU:
-        return basicSetMenu(null, msgs);
+      case AMenuPackage.ITEM__SUBMENU:
+        return basicSetSubmenu(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -375,16 +509,22 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
     {
       case AMenuPackage.ITEM__NAME:
         return getName();
+      case AMenuPackage.ITEM__DECORATOR:
+        return getDecorator();
       case AMenuPackage.ITEM__ACTION:
         return getAction();
       case AMenuPackage.ITEM__LABEL:
         return getLabel();
       case AMenuPackage.ITEM__TITLE:
         return getTitle();
+      case AMenuPackage.ITEM__DIRECTION:
+        return getDirection();
+      case AMenuPackage.ITEM__TARGET:
+        return getTarget();
       case AMenuPackage.ITEM__ICON:
         return getIcon();
-      case AMenuPackage.ITEM__MENU:
-        return getMenu();
+      case AMenuPackage.ITEM__SUBMENU:
+        return getSubmenu();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -402,6 +542,9 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
       case AMenuPackage.ITEM__NAME:
         setName((String)newValue);
         return;
+      case AMenuPackage.ITEM__DECORATOR:
+        setDecorator((String)newValue);
+        return;
       case AMenuPackage.ITEM__ACTION:
         setAction((String)newValue);
         return;
@@ -411,11 +554,17 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
       case AMenuPackage.ITEM__TITLE:
         setTitle((String)newValue);
         return;
+      case AMenuPackage.ITEM__DIRECTION:
+        setDirection((Direction)newValue);
+        return;
+      case AMenuPackage.ITEM__TARGET:
+        setTarget((Target)newValue);
+        return;
       case AMenuPackage.ITEM__ICON:
         setIcon((Icon)newValue);
         return;
-      case AMenuPackage.ITEM__MENU:
-        setMenu((Menu)newValue);
+      case AMenuPackage.ITEM__SUBMENU:
+        setSubmenu((SubMenu)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -434,6 +583,9 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
       case AMenuPackage.ITEM__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case AMenuPackage.ITEM__DECORATOR:
+        setDecorator(DECORATOR_EDEFAULT);
+        return;
       case AMenuPackage.ITEM__ACTION:
         setAction(ACTION_EDEFAULT);
         return;
@@ -443,11 +595,17 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
       case AMenuPackage.ITEM__TITLE:
         setTitle(TITLE_EDEFAULT);
         return;
+      case AMenuPackage.ITEM__DIRECTION:
+        setDirection(DIRECTION_EDEFAULT);
+        return;
+      case AMenuPackage.ITEM__TARGET:
+        setTarget(TARGET_EDEFAULT);
+        return;
       case AMenuPackage.ITEM__ICON:
         setIcon((Icon)null);
         return;
-      case AMenuPackage.ITEM__MENU:
-        setMenu((Menu)null);
+      case AMenuPackage.ITEM__SUBMENU:
+        setSubmenu((SubMenu)null);
         return;
     }
     super.eUnset(featureID);
@@ -465,16 +623,22 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
     {
       case AMenuPackage.ITEM__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case AMenuPackage.ITEM__DECORATOR:
+        return DECORATOR_EDEFAULT == null ? decorator != null : !DECORATOR_EDEFAULT.equals(decorator);
       case AMenuPackage.ITEM__ACTION:
         return ACTION_EDEFAULT == null ? action != null : !ACTION_EDEFAULT.equals(action);
       case AMenuPackage.ITEM__LABEL:
         return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
       case AMenuPackage.ITEM__TITLE:
         return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
+      case AMenuPackage.ITEM__DIRECTION:
+        return direction != DIRECTION_EDEFAULT;
+      case AMenuPackage.ITEM__TARGET:
+        return target != TARGET_EDEFAULT;
       case AMenuPackage.ITEM__ICON:
         return icon != null;
-      case AMenuPackage.ITEM__MENU:
-        return menu != null;
+      case AMenuPackage.ITEM__SUBMENU:
+        return submenu != null;
     }
     return super.eIsSet(featureID);
   }
@@ -492,12 +656,18 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
+    result.append(", decorator: ");
+    result.append(decorator);
     result.append(", action: ");
     result.append(action);
     result.append(", label: ");
     result.append(label);
     result.append(", title: ");
     result.append(title);
+    result.append(", direction: ");
+    result.append(direction);
+    result.append(", target: ");
+    result.append(target);
     result.append(')');
     return result.toString();
   }

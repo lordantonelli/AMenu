@@ -32,6 +32,24 @@ public interface AMenuFactory extends EFactory
   Menu createMenu();
 
   /**
+   * Returns a new object of class '<em>Configurations</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Configurations</em>'.
+   * @generated
+   */
+  Configurations createConfigurations();
+
+  /**
+   * Returns a new object of class '<em>Config</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Config</em>'.
+   * @generated
+   */
+  Config createConfig();
+
+  /**
    * Returns a new object of class '<em>Item</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -41,6 +59,15 @@ public interface AMenuFactory extends EFactory
   Item createItem();
 
   /**
+   * Returns a new object of class '<em>Sub Menu</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Sub Menu</em>'.
+   * @generated
+   */
+  SubMenu createSubMenu();
+
+  /**
    * Returns a new object of class '<em>Icon</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -48,15 +75,6 @@ public interface AMenuFactory extends EFactory
    * @generated
    */
   Icon createIcon();
-
-  /**
-   * Returns a new object of class '<em>Feature</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Feature</em>'.
-   * @generated
-   */
-  Feature createFeature();
 
   /**
    * Returns the package supported by this factory.
